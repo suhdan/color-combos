@@ -2,9 +2,10 @@
   <div id="app">
     <header>
       <h1>Color Combos</h1>
+      {{color}}
     </header>
     <main>
-      <TopColorCombos/>
+      <TopColorCombos :changeColor="changeColor"/>
       <ColorInput/>
       <ColorComboResults/>
     </main>
@@ -22,6 +23,16 @@ export default {
     TopColorCombos,
     ColorInput,
     ColorComboResults
+  },
+  data() {
+    return {
+      color: 'transparent'
+    }
+  },
+  methods: {
+    changeColor: function(color) {
+      this.color = color
+    }
   }
 }
 </script>

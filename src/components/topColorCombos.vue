@@ -1,11 +1,14 @@
 <template>
+  <div v-on:click="changeColor('white')">
+      hi
+  </div>
 </template>
 
 <script>
 export default {
   name: 'TopColorCombos',
   props: {
-    msg: String
+    changeColor: Function
   }
 }
 </script>
