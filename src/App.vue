@@ -2,12 +2,11 @@
   <div id="app">
     <header>
       <h1>Color Combos</h1>
-      {{color}}
     </header>
     <main>
       <TopColorCombos :changeColor="changeColor"/>
-      <ColorInput/>
-      <ColorComboResults/>
+      <ColorInput v-bind:color="color" :changeColor="changeColor"/>
+      <ColorComboResults v-bind:color="color"/>
     </main>
   </div>
 </template>
