@@ -1,8 +1,10 @@
 <template>
   <div>
     <ul>
-      <li v-for="combo in topCombos" v-on:click="changeColor(combo.color_one)">
-        {{combo.color_one}}        
+      <li v-for="combo in topCombos">
+        <button v-on:click="changeColor(combo.color_one)">
+          {{combo.color_one}}        
+        </button>
       </li>
     </ul>
   </div>

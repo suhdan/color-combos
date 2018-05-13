@@ -36,14 +36,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Lobster');
+
   body {
     height: 100vh;
     width: 100%;
     font-size: 16px;
     font-family: 'Lobster', cursive;
-    background-color: #404040;
-    color: #ffffff;
+    background-color: white;
+    color: black;
   }
 
   header {
@@ -56,10 +58,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
 
-  main > div {
-    margin: 10px;
+    > div {
+      margin: 10px;
+    }
   }
 
   @media(min-width: 600px) {
