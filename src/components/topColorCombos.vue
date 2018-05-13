@@ -1,12 +1,23 @@
 <template>
   <div>
-    <ul>
+    <h2>Most Popular</h2>
+    <ul v-if="!loading">
       <li v-for="combo in topCombos">
-        <button v-on:click="changeColor(combo.color_one)">
+        <button 
+          v-bind:style="{background: combo.color_two, color: combo.color_one}" 
+          v-on:click="changeColor(combo.color_one)"
+        >
           {{combo.color_one}}        
+        </button>
+        <button
+          v-bind:style="{background: combo.color_one, color: combo.color_two}" 
+          v-on:click="changeColor(combo.color_two)"
+        >
+          {{combo.color_two}}        
         </button>
       </li>
     </ul>
+    <div v-else>loading</div>
   </div>
 </template>
 
@@ -20,7 +31,8 @@ export default {
   },
   data() {
     return {
-      topCombos: []
+      topCombos: [],
+      loading: true
     }
   },
   created: function() {
@@ -33,6 +45,7 @@ export default {
           combo.color_one = this.ensureSixDigitHex(combo.color_one)
           return combo
         })
+        this.loading = false
       })
     },
     ensureSixDigitHex: function(hexCode) {
