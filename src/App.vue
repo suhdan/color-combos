@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     changeColor: function(color) {
+      console.log(color)
       this.color = color
     }
   }
@@ -43,7 +44,7 @@ export default {
   body {
     height: 100vh;
     width: 100%;
-    background-color: white;
+    background-color:#fff;
     color: black;
   }
 
