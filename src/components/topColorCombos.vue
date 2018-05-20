@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="top-combos">
     <h2>Most Popular</h2>
     <ul v-if="!loading">
       <li :key="combo.id" v-for="combo in topCombos">
@@ -8,17 +8,25 @@
           v-on:click="changeColor(combo.color_one)"
         >
           {{combo.color_one}}        
+          <div 
+            class="connector left"
+            v-bind:style="{background: combo.color_one}">
+          </div>
         </button>
         <button
           v-bind:style="{background: combo.color_one, color: combo.color_two}" 
           v-on:click="changeColor(combo.color_two)"
         >
           {{combo.color_two}}        
+          <div 
+            class="connector right"
+            v-bind:style="{background: combo.color_two}">
+          </div>
         </button>
       </li>
     </ul>
     <div v-else>loading</div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -63,5 +71,58 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.top-combos {
+  h2 {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 0 5px;
+
+    li > button {
+      width: calc(100vw / 2.5);
+      padding: 15px 0;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  .connector {
+    position: absolute; 
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+  }
+  .connector.left {
+    bottom: -10px;
+    left: 40%;
+  }
+  .connector.right {
+    top: -10px;
+    left: 51%;
+  }
+}
+
+@media(min-width: 600px) {
+  .top-combos {
+    ul {
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      li {
+        width: 100%;
+        display: flex;  
+      }
+      li > button {
+        width: 50%;
+      }
+    }
+  }
+}
 </style>

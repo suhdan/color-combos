@@ -40,40 +40,36 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Lobster');
   @import './assets/resets.css';
 
-  body {
-    height: 100vh;
-    width: 100%;
-    background-color:#fff;
-    color: #000;
-  }
-
   #app {
+    height: 100%;
+    background-color: white;
+    color: black;
     font-size: 16px;
     font-family: 'Lobster', cursive;
-  }
 
-  header {
-    width: 100%;
-    text-align: center;
-    font-size: 7em;
-  }
+    header {
+      width: 100%;
+      text-align: center;
+      font-size: 2.5em;
+    }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-    > div {
-      margin: 10px;
+      > div {
+        margin: 10px;
+      }
     }
   }
 
   @media(min-width: 600px) {
-    body {
+    #app {
       font-size: 12px;
-    }
-    main {
-      flex-direction: row;
+      main {
+        flex-direction: row;
+      }
     }
   }
 </style>
