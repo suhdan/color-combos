@@ -2,7 +2,7 @@
   <div>
     <h2>Most Popular</h2>
     <ul v-if="!loading">
-      <li v-for="combo in topCombos">
+      <li :key="combo.id" v-for="combo in topCombos">
         <button 
           v-bind:style="{background: combo.color_two, color: combo.color_one}" 
           v-on:click="changeColor(combo.color_one)"

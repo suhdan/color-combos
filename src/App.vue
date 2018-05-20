@@ -38,14 +38,18 @@ export default {
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Lobster');
+  @import './assets/resets.css';
 
   body {
     height: 100vh;
     width: 100%;
-    font-size: 16px;
-    font-family: 'Lobster', cursive;
     background-color: white;
     color: black;
+  }
+
+  #app {
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
   }
 
   header {

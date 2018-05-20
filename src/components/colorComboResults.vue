@@ -2,7 +2,7 @@
   <div className="color-combos">
     <h3>Combos</h3>
     <ul v-if="!loading">
-      <li v-for="combo in combos">
+      <li :key="combo.id" v-for="combo in combos">
         {{getComboColor(combo)}}
       </li>
     </ul>
