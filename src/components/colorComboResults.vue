@@ -1,5 +1,5 @@
 <template>
-  <div className="color-combos">
+  <div class="color-combos">
     <h3>Combos</h3>
     <ul v-if="!loading">
       <li :key="combo.id" v-for="combo in combos">
@@ -46,5 +46,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.color-combos {
+  h3 {
+    text-align: center;
+  }
+}
 </style>
