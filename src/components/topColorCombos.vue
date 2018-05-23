@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 .top-combos {
   h2 {
-    margin: 5px 0;
+    margin-bottom: 10px;
     text-align: center;
   }
 

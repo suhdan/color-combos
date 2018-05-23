@@ -1,6 +1,6 @@
 <template>
   <div class="color-combos">
-    <h3>Combos</h3>
+    <h2>Combos</h2>
     <ul v-if="!loading">
       <li :key="combo.id" v-for="combo in combos">
         <div 
@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss">
 .color-combos {
-  h3 {
+  h2 {
     text-align: center;
     margin-bottom: 15px;
   }
