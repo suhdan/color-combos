@@ -16,6 +16,9 @@ export default {
     changeColor: Function,
     color: String
   },
+  created: function() {
+    this.handleInput({ hex: '#000000' })
+  },
   methods: {
     handleInput: function(e) {
       this.changeColor(e.hex)
