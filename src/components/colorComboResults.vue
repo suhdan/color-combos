@@ -3,7 +3,18 @@
     <h3>Combos</h3>
     <ul v-if="!loading">
       <li :key="combo.id" v-for="combo in combos">
-        {{getComboColor(combo)}}
+        <div 
+          class="combo-one"
+          v-bind:style="{background: getComboColor(combo), color: color}" 
+        >
+          {{color}}
+        </div>
+        <div 
+          class="combo-two"
+          v-bind:style="{background: color, color: getComboColor(combo)}" 
+        >
+          {{getComboColor(combo)}}
+        </div>
       </li>
     </ul>
     <div v-else>loading</div>
@@ -50,6 +61,19 @@ export default {
 .color-combos {
   h3 {
     text-align: center;
+    margin-bottom: 15px;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+
+    div {
+      padding: 15px 10px;
+      flex: 1;
+      text-align: center;
+    }
   }
 }
 </style>
