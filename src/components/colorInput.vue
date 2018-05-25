@@ -1,5 +1,6 @@
 <template>
   <div class="color-input">
+    <h2>Choose a color</h2>
     <Chrome :value="color" @input="handleInput"/>
   </div>
 </template>
@@ -29,6 +30,10 @@ export default {
 
 <style lang="scss">
 .color-input {
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
   .vc-chrome {
     width: 100%;
   }

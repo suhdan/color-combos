@@ -25,17 +25,21 @@
         </button>
       </li>
     </ul>
-    <div v-else>
-      <div class="rainbow-placeholder"></div>
+    <div class="loading-placeholder" v-else>
+      <Spinner/>
     </div>
   </section>
 </template>
 
 <script>
 import axios from 'axios'
+import Spinner from '../elements/spinner'
 
 export default {
   name: 'TopColorCombos',
+  components: {
+    Spinner
+  },
   props: {
     changeColor: Function
   },
@@ -110,37 +114,11 @@ export default {
     left: 51%;
   }
 
-  .rainbow-placeholder {
-    width: 100%;
+  .loading-placeholder {
     height: 92px;
-    opacity: 0.2;
-    animation: rainbow 5s linear alternate infinite;
-    background: #ff0000;
+    display: flex;
+    align-items: center;
   }
-}
-
-@keyframes rainbow {
-	0% {
-		background-color: #ff0000;
-	}
-	17% {
-		background-color: #ffc000;
-	}
-	34% {
-		background-color: #1aff00;
-	}
-	51% {
-		background-color: #00ffff;
-	}
-	68% {
-		background-color: #3900ff;
-	}
-	85% {
-		background-color: #9700ff;
-	}
-	100% {
-		background-color: #ff0000;
-	}
 }
 
 @media(min-width: 600px) {

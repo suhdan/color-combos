@@ -81,7 +81,7 @@ export default {
       }
     }
 
-    h1, h3 {
+    h1 {
       text-shadow: 1px 1px 1px #00000069;
     }
 
