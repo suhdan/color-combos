@@ -1,8 +1,8 @@
 <template>
-  <div class="color-input">
+  <section class="color-input">
     <h2>Choose a color</h2>
     <Chrome :value="color" @input="handleInput"/>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -36,6 +36,12 @@ export default {
   }
   .vc-chrome {
     width: 100%;
+  }
+}
+
+@media(min-width: 768px) {
+  .color-input {
+    flex: 4;
   }
 }
 </style>

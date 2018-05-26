@@ -1,5 +1,5 @@
 <template>
-  <div class="color-combos">
+  <section class="color-combos">
     <h2>Combos</h2>
     <ul v-if="!loading">
       <li :key="combo.id" v-for="combo in combos">
@@ -20,7 +20,7 @@
     <div v-else>
       <Spinner/>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -65,6 +65,7 @@ export default {
 
 <style lang="scss">
 .color-combos {
+
   h2 {
     text-align: center;
     margin-bottom: 15px;
@@ -79,6 +80,20 @@ export default {
       padding: 15px 10px;
       flex: 1;
       text-align: center;
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .color-combos {
+    flex: 3; 
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    li {
+      width: 100%;
     }
   }
 }

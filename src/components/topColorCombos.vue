@@ -89,13 +89,13 @@ export default {
     margin: 0 auto;
     overflow: hidden;
     overflow-x: scroll;
-    padding: 0 5px;
 
     li > button {
       width: calc(100vw / 2.5);
       padding: 15px 0;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
   }
 
@@ -121,12 +121,15 @@ export default {
   }
 }
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
   .top-combos {
+    flex: 3;
+
     ul {
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      width: 100%;
+
       li {
         width: 100%;
         display: flex;  
@@ -134,6 +137,10 @@ export default {
       li > button {
         width: 50%;
       }
+    }
+
+    .connector {
+      display: none;
     }
   }
 }

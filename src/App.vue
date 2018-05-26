@@ -77,6 +77,7 @@ export default {
         }
         a svg {
           height: 100%;
+          width: 100%;
         }
       }
     }
@@ -89,18 +90,40 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 1200px;
 
-      > div {
+      > section {
         margin: 10px;
       }
     }
   }
 
-  @media(min-width: 600px) {
+  @media(min-width: 768px) {
     #app {
-      font-size: 12px;
+      font-size: 18px;
+
+      header {
+        font-size: 3.5em;
+      }
+
+      header .links {
+        width: 105px;
+
+        a {
+          height: 25px;
+          opacity: 0.8;
+          transform: scale(1);
+          transition: transform 0.2s;
+        }
+        a:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          transition: transform 0.2s;
+        }
+      }
       main {
         flex-direction: row;
+        margin: 0 auto;
       }
     }
   }
