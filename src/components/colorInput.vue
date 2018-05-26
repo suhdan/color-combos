@@ -37,6 +37,9 @@ export default {
   .vc-chrome {
     width: 100%;
   }
+  .vc-saturation-pointer {
+    transition: top 0.3s ease-out, bottom 0.3s ease-out, left 0.3s ease-out, right 0.3s ease-out;
+  }
 }
 
 @media(min-width: 768px) {
